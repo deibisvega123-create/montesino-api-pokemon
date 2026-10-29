@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador Pokémon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+    <main class="contenedor">
+        <h1>Pokedex</h1> <hr>
+        <form method="POST" class="formulario">
+            <input
+                type="text"
+                name="pokemon"
+                placeholder="Escribe un Pokémon"
+                required
+            >
+            <button type="submit">Buscar</button>
+        </form>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        {% if pokemon %}
+            <section class="tarjeta">
+                <h2>{{ pokemon.nombre }}</h2>
+
+                {% if pokemon.imagen %}
+                    <img src="{{ pokemon.imagen }}"
+                         alt="{{ pokemon.nombre }}">
+                {% endif %}
+
+                <h3>Tipos</h3>
+                <p>{{ pokemon.tipos | join(", ") }}</p>
+
+                <h3>Movimientos (primeros 10)</h3>
+                <ul>
+                    {% for movimiento in pokemon.movimientos %}
+                        <li>{{ movimiento }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+        {% endif %}
+    </main>
+
+</body>
+</html>

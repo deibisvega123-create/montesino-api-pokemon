@@ -1,0 +1,76 @@
+body {
+    background-image: url("imagenes/Gemini_Generated_Image_3r6fq63r6fq63r6f.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contenedor {
+    background-color: rgb(193, 235, 238);
+    height: 600px;
+    width: 600px ;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 30px;
+    text-align: center;
+    border: 15px solid red;
+    box-shadow: 0 0 0 6px black;
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+}
+
+hr {
+    transform: translateY(-10px);
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+
+input {
+    background-color: rgb(193, 235, 238);
+     font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    width: 300px;
+    border: 3px solid black;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+   margin-left: 20px;
+   border: none;
+   border-radius: 5px;
+   background-color: rgb(193, 235, 238);
+   padding: 7px;
+   width: 70px;
+ 
+}
+
+button:hover {
+    color: white !important;
+    background-color: black !important;
+}
+
+p, ul, li {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+ul {
+    display: inline-block;
+    text-align: left;
+    padding-left: 25px;
+    margin: 0 auto;
+}
+
+
+
